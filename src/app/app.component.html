@@ -1,3 +1,27 @@
-<h1>
-  {{title}}
-</h1>
+<h1>{{title}}</h1>
+
+<table>
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="4">Employee</th>
+    <th colspan="2">&nbsp;</th>
+  </tr>
+  <tr>
+    <th>Created</th>
+    <th>Employee Type (Type ID)</th>
+    <th>First Name</th>
+    <th>ID</th>
+    <th>Last Name</th>
+    <th>ID of Record</th>
+    <th>Location</th>
+  </tr>
+  <tr *ngFor="let rec of employeeRecords">
+    <td>{{rec.created}}</td>
+    <td>{{rec.employeeType}} ({{rec.employeeTypeId}})</td>
+    <td>{{rec.firstName}}</td>
+    <td>{{rec.employeeId}}</td>
+    <td>{{rec.lastName}}</td>
+    <td>{{rec.recordId}}</td>
+    <td>{{rec.location}}</td>
+  </tr>
+</table>

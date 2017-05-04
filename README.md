@@ -1,14 +1,10 @@
-# FrontlineChallenge
+# Frontline Challenge
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
 
 ## Build
 
@@ -18,11 +14,12 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Assumptions
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+1. That the challenge wasn't to convert the literal string "(id,created,employee(id,firstname,employeeType(id), lastname),location)", but that this is a format description for a string such as "(403, 2016-10-20, (1774, Alice, Software Manager(201), Zachary), Nashua, NH)", representing a record for an individual employee.
 
-## Further help
+2. That each instance of "id" is a different ID number or string, specifically that the first "id" identifies the employee record, the second is an employee ID, and the third is an ID associated with the employee type.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+3. That there is no text that matches the third item "employee" itself, that "employee" instead describes the parenthetical content that follows as a group.
+
+4. That multiple example strings should be parsed and displayed.
